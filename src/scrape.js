@@ -487,6 +487,3 @@ function getReliefPitchers() {
     }
   });
 };
-
-
-getOutFielders();
