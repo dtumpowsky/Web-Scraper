@@ -3,7 +3,7 @@ var cheerio = require('cheerio');
 
 //find Outfielder stats from previous day
 function getOutFielders() {
-  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/OF/standard/stats/2018/y', function (error, response, html) {
+  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/OF/standard/stats/2018/y?&print_rows=9999', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('tr').each(function(i, element){
@@ -58,7 +58,7 @@ function getOutFielders() {
 
 //find First Baseman stats from previous day
 function getFirstBaseman() {
-  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/1B/standard/stats/2018/y', function (error, response, html) {
+  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/1B/standard/stats/2018/y?&print_rows=9999', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('tr').each(function(i, element){
@@ -112,7 +112,7 @@ function getFirstBaseman() {
 
 //find getSecondBaseman stats from previous day
 function getSecondBaseman() {
-  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/2B/standard/stats/2018/y', function (error, response, html) {
+  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/2B/standard/stats/2018/y?&print_rows=9999', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('tr').each(function(i, element){
@@ -166,7 +166,7 @@ function getSecondBaseman() {
 
 //find Shortstops stats from previous day
 function getShortStops() {
-  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/SS/standard/stats/2018/y', function (error, response, html) {
+  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/SS/standard/stats/2018/y?&print_rows=9999', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('tr').each(function(i, element){
@@ -220,7 +220,7 @@ function getShortStops() {
 
 //find ThirdBaseman stats from previous day
 function getThirdBasemen() {
-  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/3B/standard/stats/2018/y', function (error, response, html) {
+  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/3B/standard/stats/2018/y?&print_rows=9999', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('tr').each(function(i, element){
@@ -274,7 +274,7 @@ function getThirdBasemen() {
 
 //find Catcher stats from previous day
 function getCatchers() {
-  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/OF/standard/stats/2018/y', function (error, response, html) {
+  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/OF/standard/stats/2018/y?&print_rows=9999', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('tr').each(function(i, element){
@@ -328,7 +328,7 @@ function getCatchers() {
 
 //find Designated Hitter stats from previous day
 function getDesignatedHitters() {
-  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/DH/standard/stats/2018/y', function (error, response, html) {
+  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/DH/standard/stats/2018/y?&print_rows=9999', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('tr').each(function(i, element){
@@ -382,7 +382,7 @@ function getDesignatedHitters() {
 
 //find Starting Pitcher stats from previous day
 function getStartingPitchers() {
-  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/SP/standard/stats/2018/y', function (error, response, html) {
+  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/SP/standard/stats/2018/y?&print_rows=9999', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('tr').each(function(i, element){
@@ -436,7 +436,7 @@ function getStartingPitchers() {
 
 //find Relief Pitcher stats from previous day
 function getReliefPitchers() {
-  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/RP/standard/stats/2018/y', function (error, response, html) {
+  request('https://www.cbssports.com/fantasy/baseball/stats/sortable/points/RP/standard/stats/2018/y?&print_rows=9999', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('tr').each(function(i, element){
@@ -488,4 +488,5 @@ function getReliefPitchers() {
   });
 };
 
-getDesignatedHitters();
+
+getOutFielders();
